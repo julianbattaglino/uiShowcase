@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="App">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_devices_other_black_24dp"
+                    android:title="Features" />
+            </menu>
+        </item>
+
+
+        <item android:title="Profiles">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_camara"
+                    android:icon="@drawable/ic_camera_alt_black_24dp"
+                    android:title="Pic lover" />
+                <item
+                    android:id="@+id/nav_gallery"
+                    android:icon="@drawable/ic_cake_black_24dp"
+                    android:title="Social birds" />
+                <item
+                    android:id="@+id/nav_slideshow"
+                    android:icon="@drawable/ic_apps_black_24dp"
+                    android:title="Classic" />
+
+                <item
+                    android:id="@+id/nav_profile4"
+                    android:icon="@drawable/ic_palette_black_24dp"
+                    android:title="Designer" />
+                <item
+                    android:id="@+id/nav_profile5"
+                    android:icon="@drawable/ic_star_black_24dp"
+                    android:title="Bonus" />
+
+
+            </menu>
+        </item>
+
+        <item android:title="Login">
+            <menu>
+                <item
+                    android:id="@+id/nav_login1"
+                    android:icon="@drawable/ic_apps_black_24dp"
+                    android:title="Classic Login" />
+                <item
+                    android:id="@+id/nav_login2"
+                    android:icon="@drawable/ic_cake_black_24dp"
+                    android:title="Social Login" />
+
+                <item
+                    android:id="@+id/nav_login3"
+                    android:icon="@drawable/ic_palette_black_24dp"
+                    android:title="Designer Login" />
+                <item
+                    android:id="@+id/nav_login5"
+                    android:icon="@drawable/ic_camera_alt_black_24dp"
+                    android:title="Pic Lover" />
+                <item
+                    android:id="@+id/nav_login4"
+                    android:icon="@drawable/ic_star_black_24dp"
+                    android:title="Bonus Login" />
+            </menu>
+        </item>
+
+        <item android:title="Bonus">
+            <menu>
+                <item
+                    android:id="@+id/list_1"
+                    android:icon="@drawable/ic_adb_black_24dp"
+                    android:title="Activity Transition" />
+            </menu>
+        </item>
+    </group>
+</menu>

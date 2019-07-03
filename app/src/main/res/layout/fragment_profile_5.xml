@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/top_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="#F56F6C"
+            android:orientation="vertical">
+
+            <io.codetail.widget.RevealFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile_bg_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/background_splash"
+                    android:visibility="invisible" />
+            </io.codetail.widget.RevealFrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#00000000"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/toolbar"
+                    android:layout_toStartOf="@+id/image"
+                    android:layout_toLeftOf="@+id/image"
+                    android:src="@drawable/ic_menu" />
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <io.codetail.widget.RevealLinearLayout
+                android:id="@+id/wrapper_profile_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="75dp">
+
+                <com.julianbattaglino.uishowcase.customviews.ArcImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+                    android:src="@drawable/juliprofile" />
+            </io.codetail.widget.RevealLinearLayout>
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrapper_profile_img"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="Julian Battaglino - Android Developer"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_name"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/marker_4"
+                android:gravity="clip_horizontal"
+                android:text="  Azul, Buenos Aires - Argentina"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFF" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center_vertical"
+            android:background="#FFFFFF"
+            android:minHeight="90dp" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <io.codetail.widget.RevealFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:padding="10dp"
+                    android:text="Android Lollipop introduced a really great new Animator, the Circular Reveal Animation, and Ripple Effect. Let’s see the feature of these two terminologies.  Circular Reveal Animation – Reveal animations provide users visual continuity when you show or hide a group of UI elements.  Ripple Effect – Touch feedback in material design provides an instantaneous visual confirmation at the point of contact when users interact with UI elements. The default touch feedback animations for buttons use the new RippleDrawable class, which transitions between different states with a ripple effect."
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#FFFFFF"
+                    android:visibility="invisible" />
+
+
+            </io.codetail.widget.RevealFrameLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</io.codetail.widget.RevealLinearLayout>

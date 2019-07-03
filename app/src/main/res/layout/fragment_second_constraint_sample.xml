@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textLabel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Text 1"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintEnd_toStartOf="@+id/label_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/descriptionLabel1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Description 1"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintEnd_toStartOf="@+id/descriptionLabel2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLabel1" />
+
+            <TextView
+                android:id="@+id/textLabel2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Text 2"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textLabel1"
+                app:layout_constraintEnd_toStartOf="@+id/label_3"
+                app:layout_constraintStart_toEndOf="@+id/label_1"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+            <TextView
+                android:id="@+id/descriptionLabel2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Description 2"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintBaseline_toBaselineOf="@+id/descriptionLabel1"
+                app:layout_constraintEnd_toStartOf="@+id/label_3"
+                app:layout_constraintStart_toEndOf="@+id/label_1"
+                app:layout_constraintTop_toBottomOf="@+id/textLabel2" />
+
+            <TextView
+                android:id="@+id/textLabel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Text 3"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textLabel2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/label_2"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+            <TextView
+                android:id="@+id/descriptionLabel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Description 3"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintBaseline_toBaselineOf="@+id/descriptionLabel2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/label_2"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionLabel1"
+                tools:text="UNIT" />
+
+            <EditText
+                android:id="@+id/firstEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="text"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+            <TextView
+                android:id="@+id/title2TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintTop_toBottomOf="@+id/firstEditText"
+                tools:text="TYPE" />
+
+            <EditText
+                android:id="@+id/secondEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="text"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintTop_toBottomOf="@+id/title2TextView" />
+
+            <TextView
+                android:id="@+id/titlePriceTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/titlePlusTextView"
+                app:layout_constraintTop_toBottomOf="@+id/secondEditText"
+                tools:text="PRICE" />
+
+            <EditText
+                android:id="@+id/priceEditText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:text="text"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/titlePriceTextView"
+                app:layout_constraintTop_toBottomOf="@+id/titlePriceTextView" />
+
+            <TextView
+                android:id="@+id/titlePlusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintBottom_toBottomOf="@+id/priceEditText"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toRightOf="@+id/priceEditText"
+                app:layout_constraintTop_toTopOf="@+id/priceEditText"
+                tools:text="x" />
+
+            <TextView
+                android:id="@+id/titleQTYTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toRightOf="@+id/titlePlusTextView"
+                app:layout_constraintTop_toBottomOf="@+id/secondEditText"
+                tools:text="QUANTITY" />
+
+            <EditText
+                android:id="@+id/QTYEditText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="@string/dummy_text"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toRightOf="@+id/titlePlusTextView"
+                app:layout_constraintRight_toLeftOf="@+id/titleXTextView"
+                app:layout_constraintTop_toBottomOf="@+id/titlePriceTextView" />
+
+            <TextView
+                android:id="@+id/titleXTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintBottom_toBottomOf="@+id/priceEditText"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toRightOf="@+id/QTYEditText"
+                app:layout_constraintRight_toLeftOf="@+id/totalEditText"
+                app:layout_constraintTop_toTopOf="@+id/QTYEditText"
+                tools:text="=" />
+
+            <TextView
+                android:id="@+id/titleTotalTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toRightOf="@+id/titleXTextView"
+                app:layout_constraintTop_toBottomOf="@+id/secondEditText"
+                tools:text="TOTAL" />
+
+            <EditText
+                android:id="@+id/totalEditText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:text="text"
+                android:textColor="@color/black_overlay"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintLeft_toRightOf="@+id/titleXTextView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTotalTextView" />
+
+            <Button
+                android:id="@+id/label_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="1"
+                android:textColor="#f7f7f7"
+                app:layout_constraintEnd_toStartOf="@+id/label_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+            <Button
+                android:id="@+id/label_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="2"
+                android:textColor="#f7f7f7"
+                app:layout_constraintEnd_toStartOf="@+id/label_3"
+                app:layout_constraintStart_toEndOf="@+id/label_1"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+            <Button
+                android:id="@+id/label_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="3"
+                android:textColor="#f7f7f7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/label_2"
+                app:layout_constraintTop_toBottomOf="@+id/priceEditText" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="1"
+                android:textColor="#f7f7f7"
+                app:layout_constraintEnd_toStartOf="@+id/button2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="2"
+                android:textColor="#f7f7f7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/button1"
+                app:layout_constraintTop_toBottomOf="@+id/label_1" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="BUTTON"
+                android:textColor="#f7f7f7"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

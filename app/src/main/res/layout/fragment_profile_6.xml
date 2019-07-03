@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <RelativeLayout
+        android:id="@+id/content_myprofile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rv_cards_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- No session -->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_user_personal_information_nosession"
+                        android:layout_width="match_parent"
+                        android:layout_height="166dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_profile_bg"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_user_nosession"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="sans-serif-black"
+                                android:foregroundGravity="center"
+                                android:gravity="center"
+                                android:text="Ingresa a tu cuenta o regístrate para revisar\ntu informaci&#243;n personal, direcciones\ny compras en Dominio.cl"
+                                android:textAllCaps="false"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_login_nosession"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:layout_below="@+id/tv_user_nosession"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="17dp"
+                                android:background="@drawable/background_green_solid_6dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:paddingLeft="20dp"
+                                    android:paddingRight="20dp"
+                                    android:text="Ingresa"
+                                    android:textAllCaps="true"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- session -->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_user_personal_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="113dp"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/backgroundshop"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="26dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/roboto_condensed_bold"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:text="Julian Battaglino"
+                                android:textAllCaps="true"
+                                android:textColor="#429345"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_user_mail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_user_name"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+
+                                android:fontFamily="@font/roboto_condensed_bold"
+                                android:text="juanperez@gmail.com"
+                                android:textAllCaps="false"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <!--android:textSize="@dimen/text_product_technical_specification_size"-->
+
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/cards_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#e5e5e5" />
+
+                <!-- Modo de envio-->
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/rl_delivery_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/sc_iv_notification_sales_channels_image"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/icon_mapmarker"
+                        app:layout_constraintBottom_toBottomOf="@+id/sc_ctv_notification_sales_channels_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/sc_ctv_notification_delivery_mode_description" />
+
+                    <TextView
+                        android:id="@+id/sc_ctv_notification_delivery_mode_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:text="Metodo de envio"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/sc_iv_notification_sales_channels_image"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.37" />
+
+                    <TextView
+                        android:id="@+id/sc_ctv_notification_sales_channels_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto_condensed_bold"
+                        android:gravity="top|left"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:text="A convenir"
+                        android:textColor="#9e9e9e"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/sc_ctv_notification_delivery_mode_description"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/sc_ctv_notification_delivery_mode_description"
+                        app:layout_constraintTop_toBottomOf="@+id/sc_ctv_notification_delivery_mode_description"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_account_detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+
+                    <!-- Header detalles de cuenta-->
+                    <RelativeLayout
+                        android:id="@+id/rl_account_detail_container_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_account_detail_container_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="16dp"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingBottom="8dp"
+                            android:text="Información de cuenta"
+                            android:textAllCaps="true"
+                            android:textColor="#7b7b7b"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <!-- Mis datos -->
+                    <RelativeLayout
+                        android:id="@+id/rl_personal_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_account_detail_container_header"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/iv_personal_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_personal_information"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/mobile_mi_cuenta" />
+
+                        <TextView
+                            android:id="@+id/tv_personal_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/iv_personal_information"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Mis Datos"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_personal_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_personal_information"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="14dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+
+                    <!-- Cambiar clave -->
+                    <RelativeLayout
+                        android:id="@+id/rl_change_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_personal_information"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/iv_change_pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_change_pass"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:src="@drawable/ic_password" />
+
+                        <TextView
+                            android:id="@+id/tv_change_pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/iv_change_pass"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Cambio de clave"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_change_pass"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_change_pass"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="14dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+
+                    <!-- Mis direcciones -->
+                    <RelativeLayout
+                        android:id="@+id/rl_personal_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_change_pass"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_personal_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_personal_address"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/icon_mapmarker" />
+
+                        <TextView
+                            android:id="@+id/tv_personal_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/iv_personal_address"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Mis Direcciones"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_personal_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_personal_address"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="14dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+
+                    <!-- Mis compras -->
+                    <RelativeLayout
+                        android:id="@+id/rl_last_purchases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_personal_address"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/iv_icon_purchases"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_last_purchases"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:contentDescription="Mis Compras"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/ic_cart" />
+
+                        <TextView
+                            android:id="@+id/tv_last_purchases"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/iv_icon_purchases"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Detalle de compras"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_account_options_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Header ayuda -->
+                    <RelativeLayout
+                        android:id="@+id/rl_account_options_container_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_account_options_container_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="16dp"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingBottom="8dp"
+                            android:text="Ayuda"
+                            android:textAllCaps="true"
+                            android:textColor="#7b7b7b" />
+                    </RelativeLayout>
+
+                    <!-- Centro de ayuda -->
+                    <RelativeLayout
+                        android:id="@+id/rl_account_options_help_center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_account_options_container_header"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/iv_account_options_help_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_account_options_help_center"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/icono_centro_ayuda" />
+
+                        <TextView
+                            android:id="@+id/tv_account_options_help_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@+id/iv_account_options_help_center"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Centro de ayuda"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_account_options_help_center"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_account_options_help_center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="14dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+
+                    <!-- Locales Jumbo -->
+                    <RelativeLayout
+                        android:id="@+id/rl_jumbo_branches"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_account_options_help_center"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_jumbo_branches"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_jumbo_branches"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/ic_branches" />
+
+                        <TextView
+                            android:id="@+id/tv_jumbo_branches"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@+id/iv_jumbo_branches"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text=">Locales Jumbo"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_jumbo_branches"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_jumbo_branches"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+
+                    <!-- Servicio al cliente -->
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_jumbo_branches"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/iv_icon_customer_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_customer_service"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:contentDescription="Mis Compra"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/ic_phone" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/iv_icon_customer_service"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="10dp"
+                            android:text="Atencion al Cliente |"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_service_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/tv_customer_service"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="10dp"
+                            android:text="&#160;0800 Help"
+                            android:textColor="#009639"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_service_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_customer_service"
+                            android:layout_toEndOf="@id/iv_icon_customer_service"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:text="Horario de Atención"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_service_schedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_customer_service_text"
+                            android:layout_toEndOf="@id/iv_icon_customer_service"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingBottom="16dp"
+                            android:text="Lunes a domingo de 8:00 a 23:00 hs."
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+                    <!-- Términos y condiciones (GONE) -->
+                    <RelativeLayout
+                        android:id="@+id/rl_account_options_terms_and_conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_account_options_help_center"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_account_options_terms_and_conditions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/tv_account_options_terms_and_conditions"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/ic_terminos" />
+
+                        <TextView
+                            android:id="@+id/tv_account_options_terms_and_conditions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_toEndOf="@id/iv_account_options_terms_and_conditions"
+                            android:fontFamily="sans-serif-regular"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Términos y condiciones"
+                            android:textColor="#000000" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_account_options_terms_and_conditions"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_account_options_terms_and_conditions"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="14dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_log_out_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_log_out_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp">
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_log_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_log_out_header"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/iv_log_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            app:srcCompat="@drawable/logout" />
+
+                        <TextView
+                            android:id="@+id/tv_log_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="54dp"
+                            android:fontFamily="@font/roboto_condensed_bold"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="16dp"
+                            android:text="Cerrar sesión"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="11dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="16dp"
+                            app:srcCompat="@drawable/ic_expandable_chevron_right" />
+
+                        <View
+                            android:id="@+id/line_separator_log_out"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/tv_log_out"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="14dp"
+                            android:background="#e6e6e5" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/pb_my_profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF"
+            android:visibility="gone">
+
+            <android.support.v4.widget.ContentLoadingProgressBar
+                android:id="@+id/pb_my_profile"
+                style="@style/Base.Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
