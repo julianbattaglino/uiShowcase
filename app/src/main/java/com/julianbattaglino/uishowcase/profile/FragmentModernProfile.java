@@ -25,7 +25,7 @@ import java.util.List;
  * Created by Julian Battaglino.
  */
 public class FragmentModernProfile extends Fragment {
-    private TextView profile_name, tag1, tag2, title, profile_name_1;
+    private TextView tag1, tag2, title, profile_name_1;
     private ImageView img1, img2, img3;
     private View v;
     private QuickAdapter<ProfileMessages> adapter;
@@ -56,7 +56,6 @@ public class FragmentModernProfile extends Fragment {
         Toolbar toolbar = (Toolbar) getView().findViewById(R.id.toolbar);
 
         title = (TextView) getView().findViewById(R.id.title);
-        profile_name = (TextView) getView().findViewById(R.id.profile_name);
         profile_name_1 = (TextView) getView().findViewById(R.id.profile_name_1);
         tag1 = (TextView) getView().findViewById(R.id.tag1);
         tag2 = (TextView) getView().findViewById(R.id.tag2);
@@ -80,8 +79,6 @@ public class FragmentModernProfile extends Fragment {
         AnimationUtils.showMe(tag1, 900);
         AnimationUtils.showMe(tag2, 1000);
 
-        AnimationUtils.showMe(profile_name, 600);
-        AnimationUtils.showMe(profile_name, 800);
 
         AnimationUtils.showMe(profile_name_1, 600);
         AnimationUtils.showMe(profile_name_1, 800);

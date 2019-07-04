@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/martita"
+    android:background="@drawable/basicprofile"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -31,7 +31,7 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/roboto_condensed_bold"
             android:gravity="center"
-            android:text="Traveller Profile"
+            android:text="Basic Profile"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#FFF" />
     </android.support.v7.widget.Toolbar>
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toolbar"
         android:background="#965C8D89"
         android:orientation="vertical">
 
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_condensed_bold"
             android:padding="10dp"
-            android:text="Marta Monteagudo"
+            android:text="Julian Battaglino"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#313B3A"
             android:textSize="24sp"

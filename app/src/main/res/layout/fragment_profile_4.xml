@@ -46,7 +46,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="330dp"
         android:background="@color/material_blue_grey_200"
         android:orientation="vertical">
 
@@ -119,16 +119,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="38dp">
 
-            <TextView
-                android:id="@+id/profile_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:fontFamily="@font/roboto_condensed_bold"
-                android:text="Principal"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/email_color"
-                android:textSize="40dp" />
 
             <TextView
                 android:id="@+id/profile_name_1"
@@ -137,10 +127,11 @@
 
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/roboto_condensed_bold"
-                android:text="Designer"
+                android:layout_marginStart="10dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/email_color"
-                android:textSize="40dp" />
+                android:text="@string/designer"
+                android:textSize="40sp" />
         </LinearLayout>
 
         <TextView
@@ -152,7 +143,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_condensed_bold"
-            android:text="Who believe in simplicity"
+            android:text="Creativity"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/email_color" />
 
@@ -165,7 +156,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/roboto_condensed_bold"
-            android:text="love with UI/UX/GUI"
+            android:text="UI/UX/GUI"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/email_color"
             android:textSize="18sp" />

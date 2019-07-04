@@ -15,7 +15,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/tocallogay" />
+        android:src="@drawable/travel" />
 
     <com.julianbattaglino.uishowcase.customviews.ArcImageView
         android:id="@+id/profile_img"
@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:src="@drawable/tocalloface"
+        android:src="@drawable/juliprofile"
         android:visibility="invisible" />
 
     <TextView
@@ -34,17 +34,19 @@
         android:layout_below="@+id/profile_img"
         android:layout_centerHorizontal="true"
         android:padding="10dp"
-        android:text="Ingeniero Julian Massaro"
+        android:fontFamily="@font/roboto_condensed_bold"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/material_indigo_A400"
         android:textStyle="bold"
+        android:text="Julian Battaglino"
         android:visibility="invisible" />
+    />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="480dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -75,8 +77,9 @@
                 android:padding="10dp"
                 android:text="Followers"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_condensed_bold"
                 android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"
                 android:visibility="invisible" />
 
         </LinearLayout>
@@ -112,9 +115,11 @@
                 android:padding="10dp"
                 android:text="Following"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_condensed_bold"
                 android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"
                 android:visibility="invisible" />
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -144,9 +149,11 @@
                 android:padding="10dp"
                 android:text="Photos"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_condensed_bold"
                 android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"
                 android:visibility="invisible" />
+            />
         </LinearLayout>
     </LinearLayout>
 

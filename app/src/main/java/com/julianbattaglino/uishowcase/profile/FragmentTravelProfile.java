@@ -48,6 +48,7 @@ public class FragmentTravelProfile extends Fragment {
         lbl_count2 = (TextView) getView().findViewById(R.id.lbl_following);
         lbl_count3 = (TextView) getView().findViewById(R.id.lbl_photos);
 
+
         name = (TextView) getView().findViewById(R.id.name);
 
         //back1 = (RelativeLayout) getView().findViewById(R.id.back1);
