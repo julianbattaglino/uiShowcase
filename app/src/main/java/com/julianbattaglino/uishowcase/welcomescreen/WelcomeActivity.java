@@ -24,7 +24,7 @@ import java.util.TimerTask;
 public class WelcomeActivity extends AppCompatActivity {
 
     // Set the duration of the splash screen
-    private static final long SPLASH_SCREEN_DELAY = 1000;
+    private static final long SPLASH_SCREEN_DELAY = 5000;
     FrameLayout frame;
     SurfaceView mSurfaceView = null;
     private LinearLayout l1, l2;
